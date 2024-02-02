@@ -1,6 +1,7 @@
-import React from "react";
-
-function SecondForm() {
+type SecondFormProps = {
+  setFormData: (data: any) => void;
+};
+function SecondForm({ setFormData }: SecondFormProps) {
   return <div>SecondForm</div>;
 }
 

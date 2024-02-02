@@ -1,6 +1,7 @@
-import React from "react";
-
-function ThirdForm() {
+type ThirdFormProps = {
+  setFormData: (data: any) => void;
+};
+function ThirdForm({ setFormData }: ThirdFormProps) {
   return <div>ThirdForm</div>;
 }
 

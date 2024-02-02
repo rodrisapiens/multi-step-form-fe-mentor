@@ -1,6 +1,7 @@
-import React from "react";
-
-function ForthForm() {
+type ForthFormProps = {
+  setFormData: (data: any) => void;
+};
+function ForthForm({ setFormData }: ForthFormProps) {
   return <div>ForthForm</div>;
 }
 

@@ -11,13 +11,25 @@ import Footer from "./Footer";
 
 function MultiStepForm() {
   const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    name: "",
+    emailAddress: "",
+    phoneNumber: "",
+    address: "",
+    planType: "",
+    planDuration: "",
+    onlineService: false,
+    largerStorage: false,
+    customizableProfile: false,
+  });
   return (
-    <div className=" w-full h-full flex flex-col items-center  justify-start">
-      <Steper setStep={setStep} />
-      {step === 1 && <FirstForm />}
-      {step === 2 && <SecondForm />}
-      {step === 3 && <ThirdForm />}
-      {step === 4 && <ForthForm />}
+    <div className=" w-full h-full flex justify-between flex-col items-center  relative bg-[#EEF5FF]">
+      <Steper step={step} setStep={setStep} />
+      {step === 1 && <FirstForm setFormData={setFormData} />}
+      {step === 2 && <SecondForm setFormData={setFormData} />}
+      {step === 3 && <ThirdForm setFormData={setFormData} />}
+      {step === 4 && <ForthForm setFormData={setFormData} />}
+
       <Footer step={step} setStep={setStep} />
     </div>
   );

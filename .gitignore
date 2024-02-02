@@ -35,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# from front end mentor
 /multi-step-form-main
-multi-step-form-main
+.multi-step-form-main
